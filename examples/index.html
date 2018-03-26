@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Plugr Example</title>
+</head>
+<body>
+  <div id="app">
+    <div data-component="counter">
+    </div>
+  </div>
+
+  <script src="plugr.bundle.js"></script>
+
+  <script>
+    class Counter extends Plugr.Component {
+      template() {
+        return `
+          <div data-target="counter"></div>
+        `
+      }
+
+      connect() {
+        this.counter = 0
+
+        console.log('yay')
+
+        setInterval(() => {
+          // this.target('counter').html((this.counter++).toString())
+        }, 1000)
+      }
+    }
+
+    Plugr.watch(document.getElementById('app'))
+
+    Plugr.registerComponent('counter', Counter)
+
+    Plugr.connectComponents(document.getElementById('app'))
+  </script>
+</body>
+</html>

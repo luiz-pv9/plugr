@@ -1,0 +1,21 @@
+{
+  "name": "plugr",
+  "description": "client side framework for simple apps",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "webpack",
+    "test": "mocha-webpack --webpack-config=webpack.config.js --require tests/setup.js --glob \"*.spec.js\" --recursive tests"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
+    "chai": "^4.1.2",
+    "jsdom": "^11.6.2",
+    "jsdom-global": "^3.0.2",
+    "mocha": "^5.0.4",
+    "mocha-webpack": "^1.1.0",
+    "sinon": "^4.4.8",
+    "webpack": "^3.11.0"
+  }
+}
