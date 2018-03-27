@@ -7,7 +7,7 @@ class MyComponent extends Component {
   }
 }
 
-describe.only('Component event specs', () => {
+describe('Component event specs', () => {
   beforeEach(() => {
     registerComponent('my_component', MyComponent)
   })

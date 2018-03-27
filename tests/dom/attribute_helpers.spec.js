@@ -15,4 +15,28 @@ describe('DOM attribute helpers', () => {
 
     expect($(div).prop('className')).to.eql('blue red')
   })
+
+  it('finds attributes', () => {
+    let $elm = $('<a href="/example"></a>')
+
+    expect($elm.attr('href')).to.eql('/example')
+  })
+
+  it('sets attributes', () => {
+    let $elm = $('<a href="/example"></a>').attr('href', '/funk')
+
+    expect($elm.attr('href')).to.eql('/funk')
+  })
+
+  it('finds data attributes', () => {
+    let $elm = $('<div data-id="3"></div>')
+
+    expect($elm.data('id')).to.eql('3')
+  })
+
+  it('sets data attributes', () => {
+    let $elm = $('<div data-id="3"></div>').data('id', 4)
+
+    expect($elm.data('id')).to.eql('4')
+  })
 })

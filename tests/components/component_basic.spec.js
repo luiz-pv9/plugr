@@ -58,7 +58,5 @@ describe('Component basic specs', () => {
     expect(component.target('hello').length).to.eq(1)
     expect(component.target('funk').length).to.eq(2)
   })
-
-  it('disconnects when removed from the root')
 })
 

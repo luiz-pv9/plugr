@@ -25,3 +25,41 @@ global.respondLatestRequestWithJs = (code) => {
   let headers = {'content-type': 'application/javascript'}
   return latestRequest.respond(200, headers, code)
 }
+
+/**
+ * Mocking the history API.
+ */
+let visitedUrls = []
+global.history = {
+  pushState(data, title, url) {
+    visitedUrls.push(url)
+    this.currentUrl = url
+  },
+  replaceState(data, title, url) {
+    visitedUrls.pop()
+    visitedUrls.push(url)
+    this.currentUrl = url
+  },
+  get length() {
+    return visitedUrls.length
+  }
+}
+
+/**
+ * Mocking the localStorage API.
+ */
+let store = {}
+global.localStorage = {
+  clear() {
+    store = {}
+  },
+  setItem(key, value) {
+    store[key] = value
+  },
+  removeItem(key) {
+    delete store[key]
+  },
+  getItem(key) {
+    return store[key]
+  }
+}
