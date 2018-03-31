@@ -2,7 +2,7 @@ import {expect} from 'chai'
 import {$} from '../lib/plugr'
 import Reflinks from '../lib/reflinks'
 
-describe.only('Reflinks spec', () => {
+describe('Reflinks spec', () => {
   let root, reflinks
 
   beforeEach(() => {
