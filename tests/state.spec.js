@@ -14,11 +14,11 @@ describe('State specs', () => {
     expect(state.get('name')).to.eql('Bird')
   })
 
-  it.only('sets and gets nested objects', () => {
+  it('sets and gets nested objects', () => {
     state.set('name.first', 'Harry')
     state.set('name.last', 'Potter')
 
-    expect(state.get('name')).to.eql({ first: 'Harry', last: 'Potter' })
+    expect(state.getAll('name')).to.eql({ first: 'Harry', last: 'Potter' })
   })
 
   it('notify on change', (done) => {
