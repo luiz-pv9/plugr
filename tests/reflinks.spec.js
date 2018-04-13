@@ -1,5 +1,6 @@
+import '../lib/plugr'
 import {expect} from 'chai'
-import {$} from '../lib/plugr'
+import {$} from '../lib/dom_element'
 import Reflinks from '../lib/reflinks'
 
 describe('Reflinks spec', () => {

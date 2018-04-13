@@ -1,4 +1,5 @@
-import {$} from '../../lib/plugr'
+import '../../lib/plugr'
+import {$} from '../../lib/dom_element'
 import {expect} from 'chai'
 
 describe('DOM target helpers', () => {

@@ -1,4 +1,6 @@
-import {Component, registerComponent, render} from '../../lib/component'
+import '../../lib/plugr'
+import {Component} from '../../lib/component'
+import {registerComponent, render} from '../../lib/component_registry'
 import {expect} from 'chai'
 
 class MyComponent extends Component {
