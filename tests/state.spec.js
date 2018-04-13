@@ -1,5 +1,5 @@
-import State from '../lib/state'
-import {expect} from 'chai'
+let { expect } = require('chai')
+let State = require('../lib/state')
 
 describe('State specs', () => {
   let state

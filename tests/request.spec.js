@@ -1,5 +1,5 @@
-import {expect} from 'chai'
-import request from '../lib/request'
+let { expect } = require('chai')
+let request = require('../lib/request')
 
 describe('request spec', () => {
   it('sends GET request', (done) => {

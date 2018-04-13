@@ -1,7 +1,5 @@
-import '../lib/plugr'
-import {expect} from 'chai'
-import {$} from '../lib/dom_element'
-import Reflinks from '../lib/reflinks'
+let {expect} = require('chai')
+let Reflinks = require('../lib/reflinks')
 
 describe('Reflinks spec', () => {
   let root, reflinks

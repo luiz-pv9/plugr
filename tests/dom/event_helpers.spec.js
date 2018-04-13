@@ -1,6 +1,4 @@
-import '../../lib/plugr'
-import {$} from '../../lib/dom_element'
-import {expect} from 'chai'
+let { expect } = require('chai')
 
 describe('DOM events', () => {
   it('registers an event on a single element', () => {

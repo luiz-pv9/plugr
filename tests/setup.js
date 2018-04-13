@@ -6,6 +6,9 @@ global.window.XMLHttpRequest = global.XMLHttpRequest
 global.requests = []
 global.latestRequest = null
 
+// Inject the global API in the window and global namespaces
+require('../lib/plugr')
+
 global.XMLHttpRequest.onCreate = req => {
   global.latestRequest = req
   global.requests.push(req) 

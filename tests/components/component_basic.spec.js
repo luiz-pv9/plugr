@@ -1,7 +1,6 @@
-import '../../lib/plugr'
-import {Component} from '../../lib/component'
-import {registerComponent, connectComponents} from '../../lib/component_registry'
-import {expect} from 'chai'
+let { expect } = require('chai')
+let { Component } = require('../../lib/component')
+let { registerComponent, connectComponents } = require('../../lib/component_registry')
 
 class MyComponent extends Component {
   connect() {
