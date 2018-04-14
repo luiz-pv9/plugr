@@ -2,7 +2,7 @@
   "name": "plugr",
   "description": "client side framework for simple apps",
   "version": "0.0.1",
-  "index": "./lib/plugr.js",
+  "main": "lib/plugr.js",
   "scripts": {
     "dev": "webpack",
     "test": "mocha-webpack --webpack-config=webpack.config.js --require tests/setup.js --glob \"*.spec.js\" --recursive tests"
