@@ -1,7 +1,7 @@
 let { expect } = require('chai')
 let { Component } = require('../../lib/component')
 
-describe.only('Remote component specs', () => {
+describe('Remote component specs', () => {
   let root
 
   let componentScript = `
@@ -17,7 +17,7 @@ describe.only('Remote component specs', () => {
   beforeEach(() => {
     root = document.createElement('div')
     root.innerHTML = `
-      <div data-component="timepicker">
+      <div data-controller="timepicker">
       </div>
     `
   })
@@ -33,7 +33,7 @@ describe.only('Remote component specs', () => {
 
     respondLatestRequestWithJs(componentScript)
 
-    expect(root.querySelector('[data-component="timepicker"]').innerHTML).to.eql('Tick tack')
+    expect(root.querySelector('[data-controller="timepicker"]').innerHTML).to.eql('Tick tack')
   })
 
   it('adds an overlay on top of the div while it loads')

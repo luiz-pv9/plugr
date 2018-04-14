@@ -19,7 +19,7 @@ describe('Component communication', () => {
 
   it('finds a component inside itself', () => {
     let {component} = render('my_component', `
-      <div data-component="nested_component">
+      <div data-controller="nested_component">
       </div>
     `)
 
@@ -30,10 +30,10 @@ describe('Component communication', () => {
 
   it('finds a component with specific data attributes', () => {
     let {component} = render('my_component', `
-      <div data-component="nested_component" data-id="2">
+      <div data-controller="nested_component" data-id="2">
       </div>
 
-      <div data-component="nested_component" data-id="3">
+      <div data-controller="nested_component" data-id="3">
       </div>
     `)
 

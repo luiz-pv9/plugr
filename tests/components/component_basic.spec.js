@@ -20,7 +20,7 @@ describe('Component basic specs', () => {
     rootElement = document.createElement('div')
 
     rootElement.innerHTML = `
-      <div data-component="my_component">
+      <div data-controller="my_component">
         <div data-target="hello"></div>
 
         <div data-target="funk"></div>
@@ -58,5 +58,10 @@ describe('Component basic specs', () => {
     expect(component.target('hello').length).to.eq(1)
     expect(component.target('funk').length).to.eq(2)
   })
+
+  // it.only('adds data-controller-initialized after it has been initialized', () => {
+  //   let component = rootElement.querySelector('[data-controller="my_component"]')
+  //   expect(component.getAttribute('data-controller-initialized')).to.eql('my_component')
+  // })
 })
 
